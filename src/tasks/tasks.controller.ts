@@ -1,6 +1,7 @@
 import { Body,Controller, Delete, Get,Param,Patch,Post, Put } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTaskDto, UpdateTaskDto } from './dto/task.dto';
+//nest g controller tasks --no-spec
 @Controller('tasks')
 export class TasksController {
     constructor(private taskService: TasksService){}

@@ -1,5 +1,6 @@
 //En base en las entidades podemos generar nuestra bases de datos
 // generando las tablas y sus relaciones mediante ORM
+//se utiliza para 
 export enum TaskStatus {
     PENDING = 'PENDING',
     IN_PROGRESS = 'IN_PROGRESS',

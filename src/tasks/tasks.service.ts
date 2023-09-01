@@ -3,6 +3,7 @@ import { Task,TaskStatus } from './task.entity';
 import {v4} from 'uuid'
 import { UpdateTaskDto } from './dto/task.dto';
 //npm i @types/uuid -D
+//nest g service tasks --no-spec
 @Injectable() //podemos reutilizarla 
 export class TasksService {
     private tasks: Task[] = [{
@@ -25,9 +26,9 @@ export class TasksService {
         this.tasks = [...this.tasks,task]
         return task
     }
-getTaskById(id: string){
-    return this.tasks.find(task => task.id === id)
-}
+    getTaskById(id: string){
+        return this.tasks.find(task => task.id === id)
+    }
 
     updateTask(id: string, updateFields: UpdateTaskDto): Task{
         const task = this.getTaskById(id)
